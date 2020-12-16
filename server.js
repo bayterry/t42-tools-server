@@ -31,7 +31,8 @@ let votes = new Map();
 // 	res.json(response);
 // });
 
-wss = new WebSocket.Server({port: 5000});
+const PORT = process.env.PORT || 5000;
+wss = new WebSocket.Server({port: PORT});
 
 wss.on('connection', ws => {
 
